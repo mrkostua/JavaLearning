@@ -1,4 +1,4 @@
-package EffectiveJavaBook.CreatingAndDeletingOfObjects;
+package EffectiveJavaBook.StaticMethodFactory;
 
 /**
  * Created by Администратор on 05.06.2017.
