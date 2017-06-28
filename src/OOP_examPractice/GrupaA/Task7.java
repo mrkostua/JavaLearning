@@ -14,5 +14,8 @@ public abstract class Task7 implements Test77{
     public final void show(){
 
     }
+    interface AllTests extends Test77{
+        float getAvg(int h,int i);
+    }
 
 }

@@ -1,5 +1,7 @@
 package OOP_examPractice.GrupaA;
 
+import java.io.IOException;
+
 /**
  * @author Konstantyn Prysiazhnyi on 27.06.2017.
  */
@@ -32,7 +34,7 @@ public class EzamGroupA {
 //    double 8 bytes	1.7e−308 to 1.7e+038
 
     //Task 3 (d)
-    //Task4 (d)
+    //Task4 (c,d)
     interface Base{
         boolean start();
     }
@@ -42,7 +44,7 @@ public class EzamGroupA {
             return (5<2);
         }
     }
-    //Task5 (d) but also possible long, int, bite(result will be cut to those types)
+    //Task5 (d)
 
 
 
@@ -59,14 +61,14 @@ class A{
 //    }
 //}
 
-//Task 7(e)
+//Task 7(e,c)
 //Task 8(c)
 //Task 9(b)
 //Task 10(d)
 //Task 11(c)
 
-//Task 12(a,b)
-class Taks12{
+//Task 12(b) Can be final but not obligatory
+ class Taks12{
     private static  void innerClass(){
          abstract class Inner {
             abstract void show();
@@ -88,14 +90,88 @@ class Taks12{
 
 //Task 15 assertion  practice
 //Task 16 ?????/
-//Task 17(c)
-//Task 18(c)
-//Task 19(c)
-//Task 20(c)
-//Task 21(c)
-//Task 22(c)
-//Task 23(c)
-//Task 24(c)
-//Task 25(c)
+//Task 17(C)
+class Task17Test{
+    public  void test(int a,int b) throws Exception{
+
+    }
+}
+class Task17 extends Task17Test{
+    private  void test(int a) throws Exception{
+
+    }
+    private void test(String a) throws IOException{
+
+    }
+    public void test(int a, int b) throws IOException{
+
+    }
+    private void practice(){
+        final int a;
+        a=5;
+        try {
+            test(2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            test("fddfdf");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            test(2,3);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            super.test(2,3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+//Task 18(b)
+
+//Task 19(b,c,d) ( final class can't be extended ) (final methods can't be override)
+//Task 20(a,b,c,d) ?? niezbedny http://www.java67.com/2016/02/how-to-loop-over-treeset-in-java-with.html
+//Task 21(a,b,c)
+class Task22{
+    private static void test(){
+        String s[] = new String[5];
+        try {
+            System.out.println(s[5]);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.out.println(e.toString());
+        }
+        s[2] = new String();
+        System.out.println("new String() " + s[2]);
+        try {
+            System.out.println(s[3].length());
+        }
+        catch (NullPointerException e) {
+            System.out.println(e.toString());
+        }
+    }
+
+    public static void main(String[] args) {
+        test();
+    }
+}
+//Task 22(b,d)
+class Task23{
+    private static void test(){
+        byte a=0;
+        System.out.println("byte :" + a);
+        System.out.println("i=" +a);
+        System.out.println(a<'a');
+    }
+}
+//Task 23(d,b)
+//Task 24(a,c,e)?
+//Task 25(c) ??? unreadable
 
 
